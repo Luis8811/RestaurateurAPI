@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Restaurateur
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+  body
+   // Barra de navegación de los idiomas
+   .navbar.navbar-default.navbar-fixed-top
+      .container
+          ul.nav.navbar-nav
+            li
+             h1 Restaurateur
+            a(href="/") Cerrar sesión
+
+   // Barra de navegación del Logo del sitio web
+   .navbar.navbar-default
+     .container
+       ul.nav.navbar-nav
+        li
+         h1 Restaurateur
+
+   // Barra de navegación de las perspectivas del CMI
+   .navbar.navbar-default.navbar
+      .container
+        .navbar-header
+          a.navbar-brand(href='/index') Inicio
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+             a(href='/products') Productos
+            li
+             a(href='/locations') Origen de pedido
+            li
+             a(href='/staff') Personal
+
+      .container
+      block content
+
+  footer
+        .row
+          .col-xs-12
+            small &copy; Luis Manuel Suárez González 2019
+
+  script(src='/javascripts/jquery.min.js')
+  script(src='/bootstrap/js/bootstrap.min.js')

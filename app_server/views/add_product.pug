@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1 Agregar producto
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action='', method='post', role='form')
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="name") Nombre
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="name", placeholder="nombre del producto" required)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="price") Precio
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="price", placeholder="Introduzca un número" type="number"  required min=0)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="cost") Costo
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="cost", placeholder="Introduzca un número" type="number"  required min=0)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="type") Tipo
+          .col-xs-12.col-sm-10
+            select#name.form-control(name="type", placeholder="Seleccione un tipo")
+             option(value="dish" selected) Dish
+             option(value="beverage") Beverage
+        button.btn.btn-default.pull-right Agregar producto
+    .col-xs-12.col-md-4

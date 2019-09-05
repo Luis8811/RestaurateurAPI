@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Restaurateur
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+  body
+   .navbar.navbar-default
+     .container
+       ul.nav.navbar-nav
+        li
+         h1 Restaurateur
+         .row.page-header
+           .col-lg-12
+             .row
+                .col-xs-12.col-md-6
+                  form.form-horizontal(action='', method='POST', role='form')
+                     .form-group
+                         label.col-xs-10.col-sm-2.control-label(for="user") usuario
+                         .col-xs-12.col-sm-10
+                          input#name.form-control(name="user", placeholder="usuario")
+                     .form-group
+                         label.col-xs-10.col-sm-2.control-label(for="password")  clave
+                         .col-xs-12.col-sm-10
+                          input#name.form-control(name="password", placeholder="clave" type="password"  required)
+                     button.btn.btn-default.pull-right Ok
+             p #{message}
+                 .col-xs-12.col-md-4
+
+  footer
+        .row
+          .col-xs-12
+            small &copy; Luis Manuel Suárez González 2019
+
+  script(src='/javascripts/jquery.min.js')
+  script(src='/bootstrap/js/bootstrap.min.js')

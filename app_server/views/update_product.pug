@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1 Actualizar producto: #{product.name}
+  .row
+    .col-xs-12.col-md-6
+      form.form-horizontal(action='', method='post', role='form')
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="price") Precio
+          .col-xs-12.col-sm-10
+            - var currentPrice = product.price
+            - var currentCost = product.cost
+            input#name.form-control(name="price", placeholder="Introduzca un número" type="number"  required min=0 value=currentPrice)
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="cost") Costo
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="cost", placeholder="Introduzca un número" type="number"  required min=0 value=currentCost)
+        button.btn.btn-default.pull-right Actualizar producto
+    .col-xs-12.col-md-4

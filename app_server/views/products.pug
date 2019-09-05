@@ -1,0 +1,21 @@
+extends layout
+
+block content
+ h2 Productos ofertados
+  #banner.page-header
+  h4 Cantidad de productos: #{products.length}
+   a(href='../add_product') (agregar)
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        each product in products
+          .col-xs-12.list-group-item
+            h4= product.name
+              small &nbsp;
+            p  Precio: #{product.price} euros
+            p Tipo: #{product.type}
+            p Costo: #{product.cost} euros
+            - var id = product._id;
+            a(href='../remove_product/' + id) Eliminar- 
+            a(href='../update_product/' + id) Actualizar- 
+          

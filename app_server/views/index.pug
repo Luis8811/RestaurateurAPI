@@ -1,0 +1,14 @@
+extends layout
+
+block content
+ h2 Finanzas semanales
+ .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        each item in finances
+          .col-xs-12.list-group-item
+            h4  #{item.date}
+              small &nbsp;
+            p Ingresos: #{item.income} euros
+            p Gastos: #{item.cost} euros
+            p Utilidades: #{item.cost} euros
